@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULATOR</title>
     <style>
+        *{ outline: none;}
         body{
             background-color: #000000b8;
+            text-align: center;
+           
+        }
+        #heading{
+            color: cornsilk;
+            box-shadow: 1px 2px 20px 3px black;
+            text-shadow: 0 0 20px #ffffff80;
         }
         #one{
             width: 300px;
             height: 200px;
             background-color: #61e9da;
-            text-align: center;
             margin: auto;
             box-shadow: 0 0 20px black;
             border-radius: 10px;
@@ -22,7 +29,6 @@
             width: 300px;
             height: 200px;
             background-color: #61e9da;
-            text-align: center;
             margin: auto;
             border-radius: 10px;
             box-shadow: 0 0 20px #ffffff5c;
@@ -39,7 +45,18 @@
     </style>
 </head>
 <body>
-    
+    <h1 id="heading">TAX CALCULATOR</h1>
+
+
+    <div id="two">
+        <button class="btn" onclick="alert('Here You Get Only The Default value total value on 6.25% tax of 1000 rupees.If Your Amount is Another Click on Second Button. :)'),calculator2(1000,6.25)" > By Pera-Meter</button>
+    <br>
+    <br>
+        <p id="productPrice1"></p>
+        <p id="totalTax1"></p>
+        <p id="totalAmount1"></p>
+    </div>
+    <br>
 
 <div id="one">
     <button class="btn" onclick="calculator()" > By prompt</button>
@@ -49,16 +66,8 @@
     <p id="totalTax"></p>
     <p id="totalAmount"></p>
 </div>
-<br>
 
-<div id="two">
-    <button class="btn" onclick="calculator2(100,10)" > By Pera-Meter</button>
-<br>
-<br>
-    <p id="productPrice1"></p>
-    <p id="totalTax1"></p>
-    <p id="totalAmount1"></p>
-</div>
+
 
     <script>
         function calculator(){
@@ -68,13 +77,13 @@
             var Tax3 = parseFloat(Tax)/100; 
             var totalTax = product * Tax3;
             var totalAmount = product + totalTax;
-            document.getElementById("productPrice").innerHTML="Product Price :- " + product + "<br/>";
+            document.getElementById("productPrice").innerHTML="Product Price :- " + product + " ₹" +"<br/>";
             // document.getElementById("one").innerHTML="<br/>"
             // document.getElementById("one").innerHTML="<br/>"
-            document.getElementById("totalTax").innerHTML="Total Tax :- " + totalTax , " %" + "<br/>" ;
+            document.getElementById("totalTax").innerHTML="Total Tax :- " + totalTax , " %" + " ₹" + "<br/>" ;
             // document.getElementById("one").innerHTML="<br/>"
             // document.getElementById("one").innerHTML="<br/>"
-            document.getElementById("totalAmount").innerHTML="The Total Amount Is :- " + totalAmount + "<br/>" ;
+            document.getElementById("totalAmount").innerHTML="The Total Amount Is :- " + totalAmount + " ₹" + "<br/>" ;
 
         }
 
@@ -83,9 +92,9 @@
             var tax = num2/100;
             var totalTax1 = price * tax;
             var totalAmount1 =price + totalTax1;
-            document.getElementById("productPrice1").innerHTML="Product Price :- " + price + "<br/>";
-            document.getElementById("totalTax1").innerHTML="Total Tax :- " + totalTax1 , " %"  + "<br/>";
-            document.getElementById("totalAmount1").innerHTML="The Total Amount Is :- " + totalAmount1 + "<br/>";
+            document.getElementById("productPrice1").innerHTML="Product Price :- " + price + " ₹" + "<br/>";
+            document.getElementById("totalTax1").innerHTML="Total Tax :- " + totalTax1 , " %"  + " ₹" + "<br/>";
+            document.getElementById("totalAmount1").innerHTML="The Total Amount Is :- " + totalAmount1 + " ₹" + "<br/>";
 
 
         }
