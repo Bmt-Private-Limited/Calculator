@@ -41,10 +41,12 @@
     <script>
         function calculator(){
             var productPrice =prompt("Type The Product Price")
-            var Tax = prompt("Type The Tax Amount")/100;  
-            var totalTax = productPrice * Tax;
-            var totalAmount = productPrice + totalTax;
-            document.getElementById("productPrice").innerHTML="Product Price :- " + productPrice + "<br/>";
+            var product = parseFloat(productPrice); 
+            var Tax = prompt("Type The Tax Amount"); 
+            var Tax3 = parseFloat(Tax)/100; 
+            var totalTax = product * Tax3;
+            var totalAmount = product + totalTax;
+            document.getElementById("productPrice").innerHTML="Product Price :- " + product + "<br/>";
             // document.getElementById("one").innerHTML="<br/>"
             // document.getElementById("one").innerHTML="<br/>"
             document.getElementById("totalTax").innerHTML="Total Tax :- " + totalTax , " %" + "<br/>" ;
