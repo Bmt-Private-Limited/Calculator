@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        #one{
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+            text-align: center;
+        }
+        #two{
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    
+<button onclick="calculator()" > By prompt</button>
+<button onclick="calculator2(100,10)" > By Pera-Meter</button>
+<div id="one">
+    <p id="productPrice"></p>
+    <p id="totalTax"></p>
+    <p id="totalAmount"></p>
+</div>
+<br>
+<div id="two">
+    <p id="productPrice1"></p>
+    <p id="totalTax1"></p>
+    <p id="totalAmount1"></p>
+</div>
+
+<!-- till now i dont understand this project -->
+
+    <script>
+        function calculator(){
+            var productPrice =prompt("Type The Product Price")
+            var Tax = prompt("Type The Tax Amount")/100;  
+            var totalTax = productPrice * Tax;
+            var totalAmount = productPrice + totalTax;
+            document.getElementById("productPrice").innerHTML="Product Price :- " + productPrice + "<br/>";
+            // document.getElementById("one").innerHTML="<br/>"
+            // document.getElementById("one").innerHTML="<br/>"
+            document.getElementById("totalTax").innerHTML="Total Tax :- " + totalTax , " %" + "<br/>" ;
+            // document.getElementById("one").innerHTML="<br/>"
+            // document.getElementById("one").innerHTML="<br/>"
+            document.getElementById("totalAmount").innerHTML="The Total Amount Is :- " + totalAmount + "<br/>" ;
+
+        }
+
+        function calculator2(num1,num2) {
+            var price = num1;
+            var tax = num2/100;
+            var totalTax1 = price * tax;
+            var totalAmount1 =price + totalTax1;
+            document.getElementById("productPrice1").innerHTML="Product Price :- " + price + "<br/>";
+            document.getElementById("totalTax1").innerHTML="Total Tax :- " + totalTax1 , " %"  + "<br/>";
+            document.getElementById("totalAmount1").innerHTML="The Total Amount Is :- " + totalAmount1 + "<br/>";
+
+
+        }
+    </script>
+</body>
+</html>
